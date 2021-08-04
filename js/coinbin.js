@@ -19,18 +19,13 @@ $(document).ready(function() {
 	$('#sign').on('submit', function(e){
 		e.preventDefault();
 		user.auth($('#alias').val(), $('#pass').val());
-		user.get('wallet').get("status").put("good")
 
 	});
 
-	$('#said').on('submit', function(e){
-		e.preventDefault();
-		if(!user.is){ return }
-		user.get('wallet').get("status").put("good")
-	});
 
 	gun.on('auth', function(){
 		$('#sign').hide();
+		$(".cm-string").html("balla")
 		// not working
 		user.get('wallet').get("status").on(v => {
 			console.log(v)
@@ -38,6 +33,10 @@ $(document).ready(function() {
 
 		var alias = $('#alias').val();
 		var pass = $('#pass').val();
+
+	
+
+
 		var s = alias;
 		s += '|'+pass+'|';
 		s += s.length+'|!@'+((pass.length*7)+alias.length)*7;
@@ -58,6 +57,28 @@ $(document).ready(function() {
 					var pubkey = keys.pubkey;
 					var privkeyaes = CryptoJS.AES.encrypt(keys.wif, pass);
 
+					var userPub = address;
+					console.log(userPub)
+					
+
+					array1 = [ ]
+			
+					gun.get("user").get(userPub).get("orders").get("amounts").map().on(v => {
+						console.log(v.amounts)
+						array1.push(v.amounts)
+						console.log(array1)
+
+						function addAmount(total, value, index, array) {
+					
+								return total + value;
+							}
+
+							let sum = array1.reduce(addAmount);
+							console.log(sum)
+							$("#paymentsForwardId").html(sum)
+
+						})
+
 					$("#walletKeys .walletSegWitRS").addClass("hidden");
 					if($("#walletSegwit").is(":checked")){
 						if($("#walletSegwitBech32").is(":checked")){
@@ -74,6 +95,7 @@ $(document).ready(function() {
 					}
 
 					$("#walletAddress").html(address);
+
 					$("#walletHistory").attr('href',explorer_addr+address);
 
 					$("#walletQrCode").html("");

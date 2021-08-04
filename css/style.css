@@ -126,11 +126,11 @@ ul.nav.nav-pills {
   }
   .button.-regular {
 	color: #202129;
-	background-color: #f2f2f2;
+	background-color: var(--color-smoke);
   }
   .button.-regular:hover {
 	color: #202129;
-	background-color: #e1e2e2;
+	background-color: #d3d3d3;
 	opacity: 1;
   }
   .button.-regular:active {
@@ -144,4 +144,16 @@ ul.nav.nav-pills {
   }
   .button.-dark:focus {
 	outline-offset: -4px;
+  }
+
+
+
+
+  .infoBox{
+	  width:31%;
+	  border: 2px solid grey;
+	  border-radius: 10px;
+	  min-height: 10em;
+	  text-align: left;
+	  padding-left: 1em;
   }
