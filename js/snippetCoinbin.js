@@ -139,6 +139,24 @@ $(document).ready(function() {
 	});
 
 	$("#walletConfirmSend").click(function(){
+        if(productPrice = 0){
+            var getOrders = gun.get("user").get(userPub).get("orders").get("amounts").set({
+            order: true,
+            amounts: 1,
+        })
+
+        getOrders.on(v => {
+            $("#computerScore").html(v.orderNumbers)
+
+        })
+        $("#sign").hide()
+        $("#infoConf").show()
+        $("#price").hide()
+        $("#checkout").hide()
+        $("#banner").show()
+        } else if(productPrice < 0){
+            console.log("price needs to be positive")
+        } else{
 		var thisbtn = $(this);
 		var tx = coinjs.transaction();
 		var txfee = $("#txFee");
@@ -194,7 +212,8 @@ $(document).ready(function() {
 			}
 
 			$("#walletLoader").addClass("hidden");
-		});
+        });
+    }
 	});
 
 	$("#walletSendBtn").click(function(){
