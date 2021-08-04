@@ -68,34 +68,7 @@ $(document).ready(function() {
 			s = Crypto.SHA256(s);
 		}
 
-        function onTrue(){
-            gun.get("user").get(userpub).get("orders").get("amounts").on(v => {
-                $("#computerScore").html(v.orderNumbers)
-            })
-            
-            function toTrue(){
-            getUserPub = $("#")
-            var getOrders = gun.get("user").get(userPub).get("orders").get("amounts").set({
-                order: true,
-                amounts: 1,
-            })
-            
-            getOrders.on(v => {
-                $("#computerScore").html(v.orderNumbers)
-            
-            })
-            $("#sign").hide()
-            $("#infoConf").show()
-            $("#price").hide()
-            $("#checkout").hide()
-            $("#banner").show()
-            
-            
-            
-            
-            
-            }
-        }
+        
 
 				coinjs.compressed = true;
 					var keys = coinjs.newKeys(s);
@@ -165,7 +138,7 @@ $(document).ready(function() {
 		walletBalance();
 	});
 
-	$("#walletConfirmSend").click(function(){
+	function transactSpend(productPrice){
 		var thisbtn = $(this);
 		var tx = coinjs.transaction();
 		var txfee = $("#txFee");
@@ -180,7 +153,7 @@ $(document).ready(function() {
 
 		$.each($("#walletSpendTo .output"), function(i,o){
 			var addr = $('.addressTo',o);
-			var amount = $('.amount',o);
+			var amount = productPrice;
 			total += amount.val()*1;
 			tx.addoutput(addr.val(), amount.val()*1);
 		});
