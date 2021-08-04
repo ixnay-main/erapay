@@ -75,21 +75,13 @@ a {
 			<div id="header" class="navbar navbar-default " role="navigation">
 				<div class="container">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a href="#home" class="navbar-brand" id="homeBtn"><h1 style="margin: 0px; color: rgb(183, 0, 255)">ERA PAY</h1></a>
+				
+						<a href="#home" class="navbar-brand" id="homeBtn"><h1 style="margin: 0px; color: rgb(183, 0, 255); font-weight: 800;">ERA PAY</h1></a>
 					</div>
-					<div class="collapse navbar-collapse">
+					<div class="collapse navbar-collapse" style="margin-top: 1em;">
 						<ul class="nav navbar-nav">
-							<li><a href="#home" data-toggle="tab"><span class="glyphicon glyphicon-briefcase"></span> Wallet</a></li>
-
-							<li><a href="#wallet" data-toggle="tab"><span class="glyphicon glyphicon-briefcase"></span> Wallet</a></li>
-					
-							<li class="hidden"><a href="#settings" data-toggle="tab"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+							<li><a href="#wallet" data-toggle="tab" style="font-weight: 600; font-size: 1.3em"> Wallet</a></li>
+							<li><a href="#about" data-toggle="tab" style="font-weight: 600; font-size: 1.3em"> About</a></li>
 						</ul>
 					</div>
 				</div>
@@ -109,33 +101,37 @@ a {
 						<br><br><br>
 
 						<div class="jumbotron" style=" box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; background-color: white; border-radius: 10px;">
-							<h1>Crypto </h1>
+							<h1>Decyphering crypto</h1><br>
+							<h3>Building dashboards and snippets to take the pain out of crypto.</h3>
 						</div>
 
 					</div>
 
 					<div class="tab-pane tab-content" id="wallet">
 						<div class="row">
-							<div class="col-md-12" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding: 1em">
+							<div class="col-md-12" style=" padding: 1em; width: fit-content; margin: auto">
 
 								
 								<form id="sign">
+									
 									<div class="" style="display:flex">
-										<input class="borderLess" id="alias" placeholder="alias">
-										<input class="borderLess" id="pass" type="password" placeholder="password">
+										<div class="button-container">
+											<div class='button -regular center' style="width: fit-content;"><input class="borderLess" id="alias" placeholder="alias"><input style="margin-left: 2em;" class="borderLess" id="pass" type="password" placeholder="password"></div>
+										</div>
 									</div>
 									<div class="" style="display:flex">
-
-										<input class="slick" id="in" type="submit" value="sign in">
-										<input class="slick" id="up" type="button" value="sign up">
+										<div class="button-container">
+											<div class='button -regular center' style="width: fit-content;"><input class="borderless" id="in" type="submit" value="sign in"><input style="margin-left: 2em;" class="borderless" id="up" type="button" value="sign up"></div>
+										</div>
 									</div>
+									<p>If opening a new account it sign up then sign in.</p>
 
 								  </form>
 
 								<div id="openWallet" class="hidden" >
 									<div class="row" id="rest">
 										<div class="col-md-12">
-											<p><span style="float:right;"><a href="javascript:;" id="walletLogout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></span></p>
+											<p><span style="float:right;"><a href="javascript:;" id="walletLogout">Logout</a></span></p>
 										</div>
 										<div class="col-md-12" align="center">
 											<div id="walletQrCode"></div> <br>
@@ -903,21 +899,10 @@ a {
 					</div>
 
 					<div class="tab-pane tab-content" id="about">
-						<h2>About <small>open source bitcoin wallet</small></h2>
-						<p>Version 1.2</p>
-						<p>Compatible with bitcoin-qt</p>
-						<p>Github <a href="https://github.com/OutCast3k/coinbin/">https://github.com/OutCast3k/coinbin/</a></p>
-						<p>TOR <a href="http://4zpinp6gdkjfplhk.onion">4zpinp6gdkjfplhk.onion</a></p>
-						<h3>What is Bitcoin?</h3>
-						<p>Bitcoin is a type of digital currency in which encryption techniques are used to regulate the generation of units of currency and verify the transfer of funds, operating independently of a central bank. See <a href="http://www.weusecoins.com/" target="_blank">weusecoins.com</a> for more information.</p>
-						<p>If you are looking to buy some Bitcoin try <a href="https://localbitcoins.com/?ch=173j" target="_blank">LocalBitcoins.com</a>.</p>
-						<h3>Information</h3>
-						<p>Coinb.in is a free and open source project released under the MIT license, originally by <a href="https://bitcointalk.org/index.php?action=profile;u=34834" target="_blank">OutCast3k</a> in 2013. Discussion of the project can be found at <a href="https://bitcointalk.org/index.php?topic=390046" target="_blank">bitcointalk.org</a> during its early testing stages when its primary focus was to develop a proof of concept multisig solution in javascript.</p>
-						<p>Coinb.in is run and funded by the generosity of others in terms of <a href="https://github.com/OutCast3k/coinbin/graphs/contributors" target="_blank">development</a> and hosting.</p>
-						<h3>Privacy</h3>
-						<p>Coinb.in beleives strongly in privacy, not only do we support the use of TOR, the site does not collect and store IP or transaction data via our servers nor do we store your bitcoins private key. We do route traffic via cloudflare using an SSL certificate.</p>
-						<h3>Donate</h3>
-						<p>Please donate to <a href="bitcoin:1CWHWkTWaq1K5hevimJia3cyinQsrgXUvg">1CWHWkTWaq1K5hevimJia3cyinQsrgXUvg</a> if you found this project useful or want to see more features!</p>
+						<h2>Powered by Gun and Coinb.in</small></h2>
+						<a href="https://twitter.com/libensveto">Me</a><br>
+<a href="https://discord.gg/9S3Ytugk2k">Gun</a>				
+<a href="https://coinb.in/">Coinb.in</a>
 					</div>
 
 					<div class="tab-pane tab-content" id="user">
