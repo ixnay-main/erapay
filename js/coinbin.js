@@ -59,6 +59,7 @@ $(document).ready(function() {
 
 					var userPub = address;
 					console.log(userPub)
+
 					
 
 					array1 = [ ]
@@ -95,7 +96,7 @@ $(document).ready(function() {
 					}
 
 					$("#walletAddress").html(address);
-
+					$("#userPub").html(address)
 					$("#walletHistory").attr('href',explorer_addr+address);
 
 					$("#walletQrCode").html("");
