@@ -138,7 +138,7 @@ $(document).ready(function() {
 		walletBalance();
 	});
 
-	function transactSpend(productPrice){
+	$("#walletConfirmSend").click(function(){
 		var thisbtn = $(this);
 		var tx = coinjs.transaction();
 		var txfee = $("#txFee");
@@ -153,7 +153,7 @@ $(document).ready(function() {
 
 		$.each($("#walletSpendTo .output"), function(i,o){
 			var addr = $('.addressTo',o);
-			var amount = productPrice;
+			var amount = $('.amount',o);
 			total += amount.val()*1;
 			tx.addoutput(addr.val(), amount.val()*1);
 		});
