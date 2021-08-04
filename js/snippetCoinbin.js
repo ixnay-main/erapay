@@ -68,6 +68,35 @@ $(document).ready(function() {
 			s = Crypto.SHA256(s);
 		}
 
+        function onTrue(){
+            gun.get("user").get(userpub).get("orders").get("amounts").on(v => {
+                $("#computerScore").html(v.orderNumbers)
+            })
+            
+            function toTrue(){
+            getUserPub = $("#")
+            var getOrders = gun.get("user").get(userPub).get("orders").get("amounts").set({
+                order: true,
+                amounts: 1,
+            })
+            
+            getOrders.on(v => {
+                $("#computerScore").html(v.orderNumbers)
+            
+            })
+            $("#sign").hide()
+            $("#infoConf").show()
+            $("#price").hide()
+            $("#checkout").hide()
+            $("#banner").show()
+            
+            
+            
+            
+            
+            }
+        }
+
 				coinjs.compressed = true;
 					var keys = coinjs.newKeys(s);
 					var address = keys.address;
