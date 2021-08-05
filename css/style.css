@@ -2,6 +2,11 @@ html, body {
 	height: 100%;
 }
 
+@font-face{
+	font-family: radwave;
+	src: url(Radwave.otf) ;
+  }
+
 body {
 	background-color:#ffffff;
 }
