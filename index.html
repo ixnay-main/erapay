@@ -119,6 +119,19 @@ a {
 									<h3>Building dashboards and snippets to take the pain out of crypto.</h3>
 								</div>
 							</div>
+
+							<div class="columns twelve" style="overflow-x: scroll;">
+								<div class="" style=" display: flex ">
+									<img class="home-img hover" style="" src="./3.png" alt="">
+									<img class="home-img hover" style="" src="./4.png" alt="">
+									<img class="home-img hover"  style="margin-top: -2.3em" src="./2.png" alt="">
+					
+									<img class="home-img hover" style="" src="./1.png" alt="">
+
+									<img class="home-img hover" style="" src="./5.png" alt="">
+
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -150,11 +163,12 @@ a {
 										<div class="">
 											<p><span style="float:right;"><a href="javascript:;" id="walletLogout">Logout</a></span></p>
 										</div>
-										<div class="" align="center" style="   padding: 1em;margin-top: 1em;border-radius: 10px;">
+										<div class="" align="center" style="   padding: 1em;margin-top: 1em;border-radius: 10px; overflow: hidden">
 											<div id="walletQrCode"></div> <br>
 										
 												<span id="walletLoader" class="hidden"><img src="images/loader.gif"></span>
-												<span id="walletAddress" style="font-size: 1.4em;"></span>
+												<div id="walletAddress" style="font-size: 1.4em;     width: 100%;
+												overflow-x: scroll;"></div>
 												<br><br>
 												<div style="text-align:center;">
 													<ul class="nav nav-pills" role="tablist">
@@ -278,12 +292,13 @@ a {
 									<div class="columns twelve" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
 				
 
-										<div style="width: 100%; text-align: left; padding-left: 1em;"><br>
+										<div style="width: 100%; text-align: left; padding-left: 1em; overflow: hidden"><br>
 											<h1>Getting Started</h1><br>
 											<p>Use all three snippets below to build a checkout box. Add your userPub(below) to the 3rd line on the second snippet. Its a mess at the moment. </p>
 											<div id="walletKeys">
 												<label>userPub: </label>
-												<span id="userPub" style="font-size: 1.4em;"></span>
+												<div id="userPub" style="font-size: 1.4em; width: 100%;
+												overflow-x: scroll;"></div>
 												<br>
 											</div>
 
