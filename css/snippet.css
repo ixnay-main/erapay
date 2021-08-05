@@ -3,6 +3,13 @@ body{
 }
 
 
+@font-face{
+	font-family: radwave;
+	src: url(Radwave.otf) ;
+  }
+
+
+
 .check{
     width:  100%; border: none; background-color: #b5dcf7ab; height: 3em; background-color: #000000; color: white;
 }
