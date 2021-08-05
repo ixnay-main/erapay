@@ -11,8 +11,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
-		<link rel="stylesheet" href="css/style.css" media="screen">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/skele.css">
+
 		
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -83,73 +85,72 @@ a {
 		</style>
 		<div id="wrap">
 			<!-- Fixed navbar -->
-			<div id="header" class="navbar navbar-default " role="navigation">
-				<div class="container" style="    position: fixed;
-				z-index: 100;
-				background-color: white;
-				width: 100%;
-				margin: 0px;
-				padding: 0px 40px;
-				padding-bottom: 1em; margin-top: -4px">
-					<div class="navbar-header">
+			<div id="header" class="" role="navigation" style="    position: fixed; z-index: 100; background-color: white; width: 100%;margin: 0px;padding: 0px 40px;padding-bottom: 1em; margin-top: -4px">
+				<div class="container" >
+					<div class="columns twelve" style="display:flex">
 				
 						<a href="#home" class="navbar-brand" id="homeBtn"><h1 style="margin: 0px; color: rgb(236, 0, 0); font-weight: 800; font-family: radwave; letter-spacing: 4px;">ERAPAY</h1></a>
 					</div>
-					<div class="collapse navbar-collapse" style="margin-top: 1em;">
-						<ul class="nav navbar-nav">
+
+					
+				</div>
+				<div class="container">
+					<div class="columns twelve" style="display:flex">
+
+						<ul class=" " style="display:flex; margin-top: 0em">
 							<li><a href="#wallet" data-toggle="tab" style="font-weight: 600; font-size: 1.3em"> Wallet</a></li>
 							<li><a href="#about" data-toggle="tab" style="font-weight: 600; font-size: 1.3em"> About</a></li>
 						</ul>
 					</div>
 				</div>
+
 			</div>
 
-			<div id="content" class="container">
+			<div id="content" class="container" style="padding: 0em">
 
 				<noscript class="alert alert-danger center-block"><span class="glyphicon glyphicon-exclamation-sign"></span> This page uses javascript, please enable it to continue!</noscript>
 
-				<div class="tab-content">
+				<div class="tab-content" style="margin-top: 8em;">
 					<div class="tab-pane tab-content active" id="home">
-						<div class="row">
-							<div class="col-md-12">
+						<div class="container">
+							<div class="columns twelve">
+								<div class="jumbotron" style=" box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; background-color: white; border-radius: 10px;">
+									<h1>Decyphering crypto</h1><br>
+									<h3>Building dashboards and snippets to take the pain out of crypto.</h3>
+								</div>
 							</div>
 						</div>
-
-						<br><br><br>
-
-						<div class="jumbotron" style=" box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; background-color: white; border-radius: 10px;">
-							<h1>Decyphering crypto</h1><br>
-							<h3>Building dashboards and snippets to take the pain out of crypto.</h3>
-						</div>
-
 					</div>
 
 					<div class="tab-pane tab-content" id="wallet">
-						<div class="row">
-							<div style=" padding: 1em;  margin: auto; ">
-
-								
-								<form id="sign">
-									
-									<div class="" style="display:flex">
-										<div class="button-container" style="margin: auto;">
-											<div class='button -regular center' style="width: fit-content;"><input class="borderLess" id="alias" placeholder="alias"><input style="margin-left: 2em;" class="borderLess" id="pass" type="password" placeholder="password"></div>
+						<div class="container">
+							<div class="columns twelve">
+								<div style=" margin: auto; ">
+									<form id="sign">
+										
+										<div class="" style="display:flex">
+											<div class="button-container" style="margin: auto;">
+												<div class='button -regular center' style="width: fit-content;"><input style="width: 48%" class="borderLess" id="alias" placeholder="alias"><input style="margin-left: 4%; width:48%" class="borderLess" id="pass" type="password" placeholder="password"></div>
+											</div>
 										</div>
-									</div>
-									<div class="" style="display:flex">
-										<div class="button-container" style="margin: auto;">
-											<div class='button -regular center cena' style="width: fit-content;"><input class="borderless" id="in" type="submit" value="sign in" style="    background-color: #ffffff00;"><input style="margin-left: 2em;     background-color: #ffffff00;" class="borderless" id="up" type="button" value="sign up"></div>
+										<div class="" style="display:flex">
+											<div class="button-container" style="margin: auto;">
+												<div class='button -regular center cena' style="width: fit-content;"><input class="borderless" id="in" type="submit" value="sign in" style="    background-color: #ffffff00;"><input style="margin-left: 2em;     background-color: #ffffff00;" class="borderless" id="up" type="button" value="sign up"></div>
+											</div>
 										</div>
-									</div>
 
-								</form>
-
-								<div id="openWallet" class="hidden" >
-									<div class="row" id="rest">
-										<div class="col-md-12">
+									</form>
+								</div>
+							</div>
+						</div>		
+						<div id="openWallet" class="hidden" >
+							<div class="" id="rest">
+								<div class="container">
+									<div class="columns twelve" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding: 1em; border-radius: 10px">
+										<div class="">
 											<p><span style="float:right;"><a href="javascript:;" id="walletLogout">Logout</a></span></p>
 										</div>
-										<div class="col-md-12" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px;">
+										<div class="" align="center" style="   padding: 1em;margin-top: 1em;border-radius: 10px;">
 											<div id="walletQrCode"></div> <br>
 										
 												<span id="walletLoader" class="hidden"><img src="images/loader.gif"></span>
@@ -231,77 +232,80 @@ a {
 												</div>
 											</div>
 										</div>
+									</div>
+								</div>
 
-										<div class="col-md-12" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
-											<div  class="infoBox" style="margin-right: 3%;">
-												<h1 style=" font-size: 4em"id=""></h1>
-												<h1 style="font-size: 2em"id="">$ </h1>
+								<div class="container">
+									<div class="columns twelve" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
+										<div  class="infoBox" style="margin-right: 3%;">
+											<h1 style=" font-size: 4em"id=""></h1>
+											<h1 style="font-size: 2em"id="">$ </h1>
 
-											</div>
-
-						
-											<div  class="infoBox"  style="margin-right: 3%;">
-													<h1 style=" font-size: 4em"id="paymentsForwardId"></h1>
-													<h1 style="font-size: 2em"id="paymentsForwardId">Orders </h1>
-
-												<script>
-
-													//productPrice will be in USD
-													var productPrice = 0;
-													//leave productAmount as 1 if your selling a digital good
-													var productAmount = 1;
-
-						
-
-											
-													
-			
-												</script>
-											</div>
 										</div>
 
-										<div class="col-md-12" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
-						
+					
+										<div  class="infoBox"  style="margin-right: 3%;">
+												<h1 style=" font-size: 4em"id="paymentsForwardId"></h1>
+												<h1 style="font-size: 2em"id="paymentsForwardId">Orders </h1>
 
-											<div style="width: 100%; text-align: left; padding-left: 1em;"><br>
-												<h1>Getting Started</h1><br>
-												<p>Use all three snippets below to build a checkout box. Add your userPub(below) to the 3rd line on the second snippet. Its a mess at the moment. </p>
-												<div id="walletKeys">
-													<label>userPub: </label>
-													<span id="userPub" style="font-size: 1.4em;"></span>
-													<br>
-												</div>
+											<script>
 
-											</div>
+												//productPrice will be in USD
+												var productPrice = 0;
+												//leave productAmount as 1 if your selling a digital good
+												var productAmount = 1;
 
-						
-										</div>
-										<div class="col-md-12" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
-											<iframe
-											src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=one-light&wt=bw&l=htmlmixed&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Fira+Code&fs=14px&lh=163%25&si=false&es=2x&wm=false&code=%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fgun%252Fexamples%252Fjquery.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fgun%252Fgun.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fgun%252Fsea.js%2522%253E%253C%252Fscript%253E%250A%250A%253Clink%2520type%253D%2522text%252Fcss%2522%2520rel%253D%2522stylesheet%2522%2520href%253D%2522%252F%252Fcdnjs.cloudflare.com%252Fajax%252Flibs%252Ffont-awesome%252F4.2.0%252Fcss%252Ffont-awesome.css%2522%2520%252F%253E%250A%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522https%253A%252F%252Fuse.fontawesome.com%252Freleases%252Fv5.15.3%252Fcss%252Fall.css%2522%2520integrity%253D%2522sha384-SZXxX4whJ79%252FgErwcOYf%252BzWLeJdY%252FqpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk%2522%2520crossorigin%253D%2522anonymous%2522%253E%250A%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fcrypto-min.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fcrypto-sha256.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fcrypto-sha256-hmac.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fsha512.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fripemd160.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Faes.js%2522%253E%253C%252Fscript%253E%250A%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fjsbn.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fellipticcurve.js%2522%253E%253C%252Fscript%253E%250A%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fcoin.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252FsnippetCoinbin.js%2522%253E%253C%252Fscript%253E%250A%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fcss%252Fstyle.css%2522%253E%250A%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fgun%252Fgun.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fgun%252Fsea.js%2522%253E%253C%252Fscript%253E"
-											style="width: 100%; height: 732px; border:0; transform: scale(1); overflow:hidden;"
-											sandbox="allow-scripts allow-same-origin">
-										  </iframe>
-										</div>
-
-										<div class="col-md-12" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
-											<iframe
-											src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=one-light&wt=bw&l=htmlmixed&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Fira+Code&fs=14px&lh=163%25&si=false&es=2x&wm=false&code=%2520%253Cscript%253E%250A%2520%2520%252F%252F%2520userPub%2520is%2520your%2520API%2520token%252C%2520it%2520could%2520be%2520used%2520by%2520others%2520but%2520its%2520only%2520pushing%2520data%2520after%2520a%2520paywall...%2520so%2520they%2520would%2520be%2520funneling%2520money%2520to%2520you.%2520With%2520the%2520acception%2520of%2520free%2520products%28could%2520lead%2520to%2520spam%252C%2520will%2520need%2520to%2520do%2520more%2520on%2520this%29.%2520You%2520will%2520need%2520to%2520fill%2520this%2520in%252C%2520the%2520value%2520is%2520given%2520on%2520the%2520wallet%2520page.%250A%2520%2520var%2520userPub%2520%253D%2520%2522%2522%253B%250A%250A%2520%2520%252F%252FproductPrice%2520will%2520be%2520in%2520USD%250A%2520%2520var%2520productPrice%2520%253D%25200%253B%250A%250A%2520%2520%252F%252Fdo%2520not%2520omit%252C%2520if%2520you%2520want%2520this%2520hidden%2520then%2520use%2520%2560display%253A%2520none%2560%2520.%2520This%2520string%2520is%2520needed%2520to%2520store%2520transaction%2520data%2520underneath%2520it.%250A%2520%2520var%2520productName%2520%253D%2520%2522Subscription%2522%253B%250A%250A%2520%2520%252F%252Fleave%2520productAmount%2520as%25201%2520if%2520your%2520selling%2520a%2520digital%2520good%250A%2520%2520var%2520productAmount%2520%253D%25201%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%252F%252F%2520******%250A%2520%2520%2520%2520%2520%2520%250A%2520%2520var%2520gun%2520%253D%2520Gun%28%27https%253A%252F%252Fmvp-gun.herokuapp.com%252Fgun%27%29%253B%250A%2520%2520var%2520user%2520%253D%2520gun.user%28%29%253B%250A%250A%2520%2520%2520%2520%2520%2520gun.get%28%2522user%2522%29.get%28userPub%29.get%28%2522orders%2522%29.get%28%2522amounts%2522%29.on%28v%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2524%28%2522%2523computerScore%2522%29.html%28v.orderNumbers%29%250A%2520%2520%2520%2520%2520%2520%257D%29%250A%253C%252Fscript%253E"
-											style="width: 100%; height: 710px; border:0; transform: scale(1); overflow:hidden;"
-											sandbox="allow-scripts allow-same-origin">
-										  </iframe>
-										</div>
-
-										<div class="col-md-12" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
-											<iframe
-											src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=one-light&wt=bw&l=htmlmixed&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Fira+Code&fs=14px&lh=163%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522container%2522%253E%250A%2509%253Cdiv%2520class%253D%2522box%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522info%2522%253E%250A%2520%2520%2520%2520%2520%2520%2509%253Ch1%2520%2520id%2520%253D%2522price%2522%253E%253C%252Fh1%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Ch4%2520id%253D%2522name%2522%253E%253C%252Fh4%253E%253Cbr%253E%253Cbr%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cform%2520id%253D%2522sign%2522%253E%2509%250A%2520%2520%2520%2520%2520%2520%2520%2509%2509%253Cdiv%2520class%253D%2522flexThis%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253Cdiv%2520class%253D%2522borderLess%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253Cdiv%2520class%253D%27borderLess%2520fit%27%253E%253Cinput%2520class%253D%2522borderLess%2522%2520id%253D%2522alias%2522%2520placeholder%253D%2522alias%2522%253E%253Cinput%2520class%253D%2522borderLess%2522%2520id%253D%2522pass%2522%2520type%253D%2522password%2522%2520placeholder%253D%2522password%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cp%2520style%253D%2522display%253Anone%2522%2520id%253D%2522developerDonation%2522%253E%253C%252Fp%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cp%2520style%253D%2522display%253Anone%2522%2520class%253D%2522form-control%2522%2520value%253D%25220.00001%2522%2520id%253D%2522txFee%2522%253E%253C%252Fp%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522flexThis%2522%2520style%253D%2522display%253Aflex%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253Cdiv%2520class%253D%2522borderLess%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253Cdiv%2520class%253D%27borderLess%2520fit%27%253E%253Cbutton%2520class%253D%2522borderLess%2520conf%2522%2520id%253D%2522in%2522%2520type%253D%2522submit%2522%253E%253Ci%2520class%253D%2522fas%2520fa-chevron-right%2522%253E%253C%252Fi%253E%253C%252Fbutton%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fform%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522infoConf%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ch2%253EThank%2520you%2520for%2520your%2520purchase%2520with%2520ERA%253C%252Fh2%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%250A%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522hide%2522%2520class%253D%2522lowerCont%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522banner%2522%2520class%253D%2522success%2522%253E%253Ci%2520class%253D%2522fas%2520fa-check-circle%2522%253E%253C%252Fi%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522checkout%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cbutton%2520%2520id%253D%2522walletConfirmSend%2522%2520%2520class%253D%2522expand%2520check%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Chekcout%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fbutton%253E%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%253C%252Fdiv%253E"
-											style="width: 100%; height: 1018px; border:0; transform: scale(1); overflow:hidden;"
-											sandbox="allow-scripts allow-same-origin">
-										  </iframe>
-										</div>
-
+					
 
 										
+												
+		
+											</script>
+										</div>
+									</div>
+								</div>
+										
+
+								<div class="container">
+
+									<div class="columns twelve" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
+				
+
+										<div style="width: 100%; text-align: left; padding-left: 1em;"><br>
+											<h1>Getting Started</h1><br>
+											<p>Use all three snippets below to build a checkout box. Add your userPub(below) to the 3rd line on the second snippet. Its a mess at the moment. </p>
+											<div id="walletKeys">
+												<label>userPub: </label>
+												<span id="userPub" style="font-size: 1.4em;"></span>
+												<br>
+											</div>
+
+										</div>
+
+					
+									</div>
+									<div class="columns twelve" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
+										<iframe
+										src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=one-light&wt=bw&l=htmlmixed&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Fira+Code&fs=14px&lh=163%25&si=false&es=2x&wm=false&code=%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fgun%252Fexamples%252Fjquery.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fgun%252Fgun.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fgun%252Fsea.js%2522%253E%253C%252Fscript%253E%250A%250A%253Clink%2520type%253D%2522text%252Fcss%2522%2520rel%253D%2522stylesheet%2522%2520href%253D%2522%252F%252Fcdnjs.cloudflare.com%252Fajax%252Flibs%252Ffont-awesome%252F4.2.0%252Fcss%252Ffont-awesome.css%2522%2520%252F%253E%250A%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522https%253A%252F%252Fuse.fontawesome.com%252Freleases%252Fv5.15.3%252Fcss%252Fall.css%2522%2520integrity%253D%2522sha384-SZXxX4whJ79%252FgErwcOYf%252BzWLeJdY%252FqpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk%2522%2520crossorigin%253D%2522anonymous%2522%253E%250A%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fcrypto-min.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fcrypto-sha256.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fcrypto-sha256-hmac.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fsha512.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fripemd160.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Faes.js%2522%253E%253C%252Fscript%253E%250A%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fjsbn.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fellipticcurve.js%2522%253E%253C%252Fscript%253E%250A%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252Fcoin.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520type%253D%2522text%252Fjavascript%2522%2520src%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fjs%252FsnippetCoinbin.js%2522%253E%253C%252Fscript%253E%250A%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522https%253A%252F%252Ferapay.vercel.app%252Fcss%252Fstyle.css%2522%253E%250A%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fgun%252Fgun.js%2522%253E%253C%252Fscript%253E%250A%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252Fgun%252Fsea.js%2522%253E%253C%252Fscript%253E"
+										style="width: 100%; height: 732px; border:0; transform: scale(1); overflow:hidden;"
+										sandbox="allow-scripts allow-same-origin">
+									</iframe>
+									</div>
+
+									<div class="columns twelve" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
+										<iframe
+										src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=one-light&wt=bw&l=htmlmixed&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Fira+Code&fs=14px&lh=163%25&si=false&es=2x&wm=false&code=%2520%253Cscript%253E%250A%2520%2520%252F%252F%2520userPub%2520is%2520your%2520API%2520token%252C%2520it%2520could%2520be%2520used%2520by%2520others%2520but%2520its%2520only%2520pushing%2520data%2520after%2520a%2520paywall...%2520so%2520they%2520would%2520be%2520funneling%2520money%2520to%2520you.%2520With%2520the%2520acception%2520of%2520free%2520products%28could%2520lead%2520to%2520spam%252C%2520will%2520need%2520to%2520do%2520more%2520on%2520this%29.%2520You%2520will%2520need%2520to%2520fill%2520this%2520in%252C%2520the%2520value%2520is%2520given%2520on%2520the%2520wallet%2520page.%250A%2520%2520var%2520userPub%2520%253D%2520%2522%2522%253B%250A%250A%2520%2520%252F%252FproductPrice%2520will%2520be%2520in%2520USD%250A%2520%2520var%2520productPrice%2520%253D%25200%253B%250A%250A%2520%2520%252F%252Fdo%2520not%2520omit%252C%2520if%2520you%2520want%2520this%2520hidden%2520then%2520use%2520%2560display%253A%2520none%2560%2520.%2520This%2520string%2520is%2520needed%2520to%2520store%2520transaction%2520data%2520underneath%2520it.%250A%2520%2520var%2520productName%2520%253D%2520%2522Subscription%2522%253B%250A%250A%2520%2520%252F%252Fleave%2520productAmount%2520as%25201%2520if%2520your%2520selling%2520a%2520digital%2520good%250A%2520%2520var%2520productAmount%2520%253D%25201%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%252F%252F%2520******%250A%2520%2520%2520%2520%2520%2520%250A%2520%2520var%2520gun%2520%253D%2520Gun%28%27https%253A%252F%252Fmvp-gun.herokuapp.com%252Fgun%27%29%253B%250A%2520%2520var%2520user%2520%253D%2520gun.user%28%29%253B%250A%250A%2520%2520%2520%2520%2520%2520gun.get%28%2522user%2522%29.get%28userPub%29.get%28%2522orders%2522%29.get%28%2522amounts%2522%29.on%28v%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2524%28%2522%2523computerScore%2522%29.html%28v.orderNumbers%29%250A%2520%2520%2520%2520%2520%2520%257D%29%250A%253C%252Fscript%253E"
+										style="width: 100%; height: 710px; border:0; transform: scale(1); overflow:hidden;"
+										sandbox="allow-scripts allow-same-origin">
+									</iframe>
+									</div>
+
+									<div class="columns twelve" align="center" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;     padding: 1em;margin-top: 1em;border-radius: 10px; display: flex;">
+										<iframe
+										src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=one-light&wt=bw&l=htmlmixed&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=56px&ph=56px&ln=true&fl=1&fm=Fira+Code&fs=14px&lh=163%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522container%2522%253E%250A%2509%253Cdiv%2520class%253D%2522box%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522info%2522%253E%250A%2520%2520%2520%2520%2520%2520%2509%253Ch1%2520%2520id%2520%253D%2522price%2522%253E%253C%252Fh1%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Ch4%2520id%253D%2522name%2522%253E%253C%252Fh4%253E%253Cbr%253E%253Cbr%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cform%2520id%253D%2522sign%2522%253E%2509%250A%2520%2520%2520%2520%2520%2520%2520%2509%2509%253Cdiv%2520class%253D%2522flexThis%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253Cdiv%2520class%253D%2522borderLess%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253Cdiv%2520class%253D%27borderLess%2520fit%27%253E%253Cinput%2520class%253D%2522borderLess%2522%2520id%253D%2522alias%2522%2520placeholder%253D%2522alias%2522%253E%253Cinput%2520class%253D%2522borderLess%2522%2520id%253D%2522pass%2522%2520type%253D%2522password%2522%2520placeholder%253D%2522password%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cp%2520style%253D%2522display%253Anone%2522%2520id%253D%2522developerDonation%2522%253E%253C%252Fp%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cp%2520style%253D%2522display%253Anone%2522%2520class%253D%2522form-control%2522%2520value%253D%25220.00001%2522%2520id%253D%2522txFee%2522%253E%253C%252Fp%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522flexThis%2522%2520style%253D%2522display%253Aflex%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253Cdiv%2520class%253D%2522borderLess%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253Cdiv%2520class%253D%27borderLess%2520fit%27%253E%253Cbutton%2520class%253D%2522borderLess%2520conf%2522%2520id%253D%2522in%2522%2520type%253D%2522submit%2522%253E%253Ci%2520class%253D%2522fas%2520fa-chevron-right%2522%253E%253C%252Fi%253E%253C%252Fbutton%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2509%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fform%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522infoConf%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Ch2%253EThank%2520you%2520for%2520your%2520purchase%2520with%2520ERA%253C%252Fh2%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%250A%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522hide%2522%2520class%253D%2522lowerCont%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522banner%2522%2520class%253D%2522success%2522%253E%253Ci%2520class%253D%2522fas%2520fa-check-circle%2522%253E%253C%252Fi%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522checkout%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cbutton%2520%2520id%253D%2522walletConfirmSend%2522%2520%2520class%253D%2522expand%2520check%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Chekcout%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fbutton%253E%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%253C%252Fdiv%253E"
+										style="width: 100%; height: 1018px; border:0; transform: scale(1); overflow:hidden;"
+										sandbox="allow-scripts allow-same-origin">
+									</iframe>
 									</div>
 								</div>
 							</div>

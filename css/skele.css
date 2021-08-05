@@ -47,6 +47,13 @@
     padding: 0; }
 }
 
+@media (max-width: 400px) {
+  div#walletQrCode {
+    display: none;
+}
+}
+
+
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
