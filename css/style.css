@@ -1,159 +1,60 @@
-html, body {
-	height: 100%;
-}
-
-body {
-	background-color:#ffffff;
-}
-
-.displaynone {
-	display:none;
-}
-
-#wrap {
-	min-height: 100%;
-	height: auto;
-	/* Negative indent footer by its height */
-	margin: 0 auto -60px;
-	/* Pad bottom by footer height */
-	padding: 0 0 60px;
-}
-
-#footer {
-	height: 60px;
-	background-color: #f5f5f5;
-	padding-top: 20px;
+body{
+    font-family: arial;
 }
 
 
+.check{
+    width:  100%; border: none; background-color: #b5dcf7ab; height: 3em; background-color: #000000; color: white;
+}
+
+.success{
+    width: 100%; height: 2em; background-color: rgb(6, 224, 6); position: relative; text-align: center;padding-top: 0.4em;font-size: 1.4em;
+}
+
+.lowerCont{
+    position: relative;
+}
+
+#infoConf{
+    padding: 1em;
+}
+
+.box{
+    margin: auto; width: 15em; overflow: hidden; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius:  10px; margin-top: 2em;
+}
+
+.info{
+    width:100%; padding: 1em; position: relative; 
+}
+
+#price{
+    font-weight: 800; font-size: 3em; margin: 0px
+}
+
+#name{
+    margin: 0px
+}
+
+.flexThis{
+    display:flex
+}
+
+.fit{
+    width: fit-content;
+}
+
+.conf{
+    margin-top: 2em;    background-color: #ffffff00;
+}
 
 .borderLess{
-	border: none;
-	background-color: #ffffff00;
+    background-color: #ffffff00;
+    border-bottom: 1px solid black;
+    border: none;
+    color: black;
 }
 
-li {
-    margin-left: 3em;
+
+textarea:focus, input:focus{
+  outline: none;
 }
-
-input{
-	outline:none;
-	border: none;
-}
-
-.slick{
-	display: flex;
-    overflow: hidden;
-    margin: 10px;
-    padding: 12px 42px;
-	color: white;
-    background: black;
-	font-size: 13px;
-    font-weight: 500;
-    line-height: 1.3;
-	border: none;
-	border-radius: 5px;
-}
-
-div#walletQrCode {
-    float: left;
-}
-
-ul.nav.nav-pills {
-    height: 3em !important;
-}
-
-.slim{
-    height: 2em;
-}
-
-:root {
-	--color-dark: #161616;
-	--color-ocean: #416dea;
-	--color-grass: #3dd28d;
-	--color-snow: #FFFFFF;
-	--color-salmon: #F32C52;
-	--color-sun: #feee7d;
-	--color-alge: #7999a9;
-	--color-flower: #353866;
-	--color-smoke: #e4e4e4;
-	--borderRadius: 10px;
-	--font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  }
-  
-  .button-container {
-	flex-wrap: wrap;
-	justify-content: center;
-  }
-
-  .button {
-	display: flex;
-	overflow: hidden;
-	margin: 10px;
-	padding: 12px 22px;
-	cursor: pointer;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-		-ms-user-select: none;
-			user-select: none;
-	transition: all 150ms linear;
-	text-align: center;
-	white-space: nowrap;
-	text-decoration: none !important;
-	text-transform: none;
-	text-transform: capitalize;
-	color: #fff;
-	border: 0 none;
-	border-radius: var(--borderRadius);
-	font-size: 13px;
-	font-weight: 500;
-	line-height: 1.3;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	justify-content: center;
-	align-items: center;
-	flex: 0 0 160px;
-	box-shadow: 2px 5px 10px var(--color-smoke);
-  }
-  .button:hover {
-	transition: all 150ms linear;
-	opacity: 0.85;
-  }
-  .button:active {
-	transition: all 150ms linear;
-	opacity: 0.75;
-  }
-  .button.-regular {
-	color: #202129;
-	background-color: var(--color-smoke);
-  }
-  .button.-regular:hover {
-	color: #202129;
-	background-color: #d3d3d3;
-	opacity: 1;
-  }
-  .button.-regular:active {
-	background-color: #d5d6d6;
-	opacity: 1;
-  }
-  
-  .button.-dark {
-	color: var(--color-snow);
-	background: var(--color-dark);
-  }
-  .button.-dark:focus {
-	outline-offset: -4px;
-  }
-
-
-
-
-  .infoBox{
-	  width:31%;
-	  border: 2px solid grey;
-	  border-radius: 10px;
-	  min-height: 10em;
-	  text-align: left;
-	  padding-left: 1em;
-  }
