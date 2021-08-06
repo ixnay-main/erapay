@@ -6,6 +6,10 @@ $(document).ready(function() {
 
 	/* open wallet code */
 
+	$("#bannerSnip").hide()
+	$("#infoConfSnip").hide()
+	$("#checkoutSnip").hide()
+
 	var explorer_tx = "https://coinb.in/tx/"
 	var explorer_addr = "https://coinb.in/addr/"
 	var explorer_block = "https://coinb.in/block/"

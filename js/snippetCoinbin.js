@@ -138,6 +138,25 @@ $(document).ready(function() {
 		walletBalance();
 	});
 
+	$("#walletConfirmSend").click(function(){
+        if(productPrice = 0){
+            var getOrders = gun.get("user").get(userPub).get("orders").get("amounts").set({
+            order: true,
+            amounts: 1,
+        })
+
+        getOrders.on(v => {
+            $("#computerScore").html(v.orderNumbers)
+
+        })
+        $("#sign").hide()
+        $("#infoConf").show()
+        $("#price").hide()
+        $("#checkout").hide()
+        $("#banner").show()
+        
+    }
+	});
 
 
 

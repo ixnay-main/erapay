@@ -10,10 +10,19 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/jpg" href="./img/favi/favicon.ico"/>
+
+		<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
 
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/skele.css">
+		<link rel="stylesheet" href="css/snippet.css">
+
+
 
 		
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -36,6 +45,8 @@
 
 		<script type="text/javascript" src="js/coin.js"></script>
 		<script type="text/javascript" src="js/coinbin.js"></script>
+
+
 
 		<script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
@@ -121,15 +132,118 @@ a {
 							</div>
 
 							<div class="columns twelve" style="overflow-x: scroll;">
-								<div class="" style=" display: flex ">
-									<img class="home-img hover" style="" src="./3.png" alt="">
-									<img class="home-img hover" style="" src="./4.png" alt="">
-									<img class="home-img hover"  style="margin-top: -2.3em" src="./2.png" alt="">
-					
-									<img class="home-img hover" style="" src="./1.png" alt="">
+								<script>
+        
+									// ***this is the snippet***
+									var userPub = "1PGsZP5zxAf7GBvBYmsysE1xKigUySorJE";
+							
+									//productPrice will be in USD
+									var productPrice = "95";
+							
+									//do not omit, if you want this hidden then use `display: none` . This string is needed to store transaction data underneath it.
+									var productName = "Ticket";
+							
+									//leave productAmount as 1 if your selling a digital good
+									var productAmount = 1;
+									// ******
+							
+							
+									var gun = Gun('https://mvp-gun.herokuapp.com/gun');
+									var user = gun.user();
+								  
+										gun.get("user").get(userPub).get("orders").get("amounts").on(v => {
+												$("#computerScore").html(v.orderNumbers)
+										})
+							
+							
+										function toTrue(){
+											getUserPub = $("#")
+											var getOrders = gun.get("user").get(userPub).get("orders").get("amounts").set({
+												order: true,
+												amounts: 1,
+											})
+							
+											getOrders.on(v => {
+												$("#computerScore").html(v.orderNumbers)
+							
+											})
+											$("#bannerSnip").show()
+											$("#signSnip").hide()
+											$("#infoConfSnip").show()
+											$("#priceSnip").hide()
+											$("#checkoutSnip").hide()
+							
+											
+							
+							
+											
+							
+										}
+								</script>
+							
+								<div class="container" style="margin-top: 10em;">
+									<div class="box" style="box-shadow: none;">    
+							
+							  
+										<script>
+    									
+												function signUpDumb(){
+											
+													$("#checkoutSnip").show()
+													$("#signSnip").hide()
 
-									<img class="home-img hover" style="" src="./5.png" alt="">
+													$("#infoConf").show()
+													$("#price").hide()
+													$("#checkout").show()
+													console.log("done")
+									
+												}
 
+												
+
+												function toTrue(){
+
+													$("#priceSnip").hide()
+													$("#nameSnip").hide()
+													$("#checkoutSnip").hide()
+													$("#bannerSnip").show()
+													$("#infoConfSnip").show()
+												}
+										</script>
+							
+										<div class="info" style="padding: 1em;">
+											<div class="" style="width: fit-content; "><h2  style="margin: 0px; color: rgb(236, 0, 0); font-weight: 800; font-family: radwave; letter-spacing: 4px;">ERAPAY</h2></div><br>
+							
+											<h1  id ="priceSnip">$10</h1>
+											<h4 id="nameSnip">Ticket</h4><br><br>
+											<form id="signSnip">	
+												<div class="flexThis">
+													<div class="borderLess">
+														<div class='borderLess fit'><input class="borderLess" id="aliasSnip" placeholder="alias"><input class="borderLess" id="passSnip" type="password" placeholder="password"></div>
+													</div>
+												</div>
+												<div class="flexThis" style="display:flex">
+													<div class="borderLess" style="display: flex">
+														<div class='borderLess fit' onclick="signUpDumb()"><button class="borderLess conf"  ><i class="fas fa-chevron-right"></i></button></div>
+													</div>
+												</div>
+											</form>
+											<div id="infoConfSnip">
+												<h2>Thank you for your purchase with ERA</h2>
+											</div>
+										</div>
+							
+										<div class="lowerCont">
+											<div id="bannerSnip" class="success"><i class="fas fa-check-circle"></i></div>
+											
+											<div id="checkoutSnip">
+												<button  id="" onclick="toTrue()"  class="expand check">
+													Chekcout
+												
+												</button>    
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
