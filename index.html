@@ -129,119 +129,68 @@ a {
 									<h1>Decyphering crypto</h1><br>
 									<h3>Building dashboards and snippets to take the pain out of crypto.</h3>
 								</div>
-							</div>
-
-							<div class="columns twelve" style="overflow-x: scroll;">
-								<script>
-        
-									// ***this is the snippet***
-									var userPub = "1PGsZP5zxAf7GBvBYmsysE1xKigUySorJE";
+							</div>	
+						</div>	
+							<div class="container" style="margin-top: 10em;">
+								<div class="box" style="box-shadow: none;">    
+						
 							
-									//productPrice will be in USD
-									var productPrice = "95";
-							
-									//do not omit, if you want this hidden then use `display: none` . This string is needed to store transaction data underneath it.
-									var productName = "Ticket";
-							
-									//leave productAmount as 1 if your selling a digital good
-									var productAmount = 1;
-									// ******
-							
-							
-									var gun = Gun('https://mvp-gun.herokuapp.com/gun');
-									var user = gun.user();
-								  
-										gun.get("user").get(userPub).get("orders").get("amounts").on(v => {
-												$("#computerScore").html(v.orderNumbers)
-										})
-							
-							
-										function toTrue(){
-											getUserPub = $("#")
-											var getOrders = gun.get("user").get(userPub).get("orders").get("amounts").set({
-												order: true,
-												amounts: 1,
-											})
-							
-											getOrders.on(v => {
-												$("#computerScore").html(v.orderNumbers)
-							
-											})
-											$("#bannerSnip").show()
-											$("#signSnip").hide()
-											$("#infoConfSnip").show()
-											$("#priceSnip").hide()
-											$("#checkoutSnip").hide()
-							
-											
-							
-							
-											
-							
-										}
-								</script>
-							
-								<div class="container" style="margin-top: 10em;">
-									<div class="box" style="box-shadow: none;">    
-							
-							  
-										<script>
-    									
-												function signUpDumb(){
-											
-													$("#checkoutSnip").show()
-													$("#signSnip").hide()
-
-													$("#infoConf").show()
-													$("#price").hide()
-													$("#checkout").show()
-													console.log("done")
+									<script>
 									
-												}
+											function signUpDumb(){
+										
+												$("#checkoutSnip").show()
+												$("#signSnip").hide()
 
-												
+												$("#infoConf").show()
+												$("#price").hide()
+												$("#checkout").show()
+												console.log("done")
+								
+											}
 
-												function toTrue(){
-
-													$("#priceSnip").hide()
-													$("#nameSnip").hide()
-													$("#checkoutSnip").hide()
-													$("#bannerSnip").show()
-													$("#infoConfSnip").show()
-												}
-										</script>
-							
-										<div class="info" style="padding: 1em;">
-											<div class="" style="width: fit-content; "><h2  style="margin: 0px; color: rgb(236, 0, 0); font-weight: 800; font-family: radwave; letter-spacing: 4px;">ERAPAY</h2></div><br>
-							
-											<h1  id ="priceSnip">$10</h1>
-											<h4 id="nameSnip">Ticket</h4><br><br>
-											<form id="signSnip">	
-												<div class="flexThis">
-													<div class="borderLess">
-														<div class='borderLess fit'><input class="borderLess" id="aliasSnip" placeholder="alias"><input class="borderLess" id="passSnip" type="password" placeholder="password"></div>
-													</div>
-												</div>
-												<div class="flexThis" style="display:flex">
-													<div class="borderLess" style="display: flex">
-														<div class='borderLess fit' onclick="signUpDumb()"><button class="borderLess conf"  ><i class="fas fa-chevron-right"></i></button></div>
-													</div>
-												</div>
-											</form>
-											<div id="infoConfSnip">
-												<h2>Thank you for your purchase with ERA</h2>
-											</div>
-										</div>
-							
-										<div class="lowerCont">
-											<div id="bannerSnip" class="success"><i class="fas fa-check-circle"></i></div>
 											
-											<div id="checkoutSnip">
-												<button  id="" onclick="toTrue()"  class="expand check">
-													Chekcout
-												
-												</button>    
+
+											function toTrue(){
+
+												$("#priceSnip").hide()
+												$("#nameSnip").hide()
+												$("#checkoutSnip").hide()
+												$("#bannerSnip").show()
+												$("#infoConfSnip").show()
+											}
+									</script>
+						
+									<div class="info" style="padding: 1em;">
+										<div class="" style="width: fit-content; "><h2  style="margin: 0px; color: rgb(236, 0, 0); font-weight: 800; font-family: radwave; letter-spacing: 4px;">ERAPAY</h2></div><br>
+						
+										<h1  id ="priceSnip">$10</h1>
+										<h4 id="nameSnip">Ticket</h4><br><br>
+										<form id="signSnip">	
+											<div class="flexThis">
+												<div class="borderLess">
+													<div class='borderLess fit'><input class="borderLess" id="aliasSnip" placeholder="alias"><input class="borderLess" id="passSnip" type="password" placeholder="password"></div>
+												</div>
 											</div>
+											<div class="flexThis" style="display:flex">
+												<div class="borderLess" style="display: flex">
+													<div class='borderLess fit' onclick="signUpDumb()"><button class="borderLess conf"  ><i class="fas fa-chevron-right"></i></button></div>
+												</div>
+											</div>
+										</form>
+										<div id="infoConfSnip">
+											<h2>Thank you for your purchase with ERA</h2>
+										</div>
+									</div>
+						
+									<div class="lowerCont">
+										<div id="bannerSnip" class="success"><i class="fas fa-check-circle"></i></div>
+										
+										<div id="checkoutSnip">
+											<button  id="" onclick="toTrue()"  class="expand check">
+												Chekcout
+											
+											</button>    
 										</div>
 									</div>
 								</div>
