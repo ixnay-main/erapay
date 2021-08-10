@@ -165,3 +165,7 @@ ul.nav.nav-pills {
   .home-img{
 	  width:27em
   }
+
+  li {
+    list-style-type: none;
+}

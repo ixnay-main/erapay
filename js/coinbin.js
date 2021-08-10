@@ -10,6 +10,9 @@ $(document).ready(function() {
 	$("#infoConfSnip").hide()
 	$("#checkoutSnip").hide()
 
+	//home page fun
+	$("#fakeinfoConf").hide()
+
 	var explorer_tx = "https://coinb.in/tx/"
 	var explorer_addr = "https://coinb.in/addr/"
 	var explorer_block = "https://coinb.in/block/"
@@ -29,11 +32,8 @@ $(document).ready(function() {
 
 	gun.on('auth', function(){
 		$('#sign').hide();
-		$(".cm-string").html("balla")
 		// not working
-		user.get('wallet').get("status").on(v => {
-			console.log(v)
-		})
+
 
 		var alias = $('#alias').val();
 		var pass = $('#pass').val();
